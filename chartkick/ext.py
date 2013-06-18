@@ -52,12 +52,8 @@ class ChartExtension(Extension):
         # jinja2 prepends 'l_' to keys
         p_kwargs = { } #NEVER change parameters
         for k, v in kwargs.items():
-            print k[2:] , v
             p_kwargs[k[2:]]= v
-
         
-        print p_kwargs
-
         self.environment.options.update(p_kwargs)
         return CHART_HTML.format(data=data, options=p_kwargs,
                                  **self.environment.options)
