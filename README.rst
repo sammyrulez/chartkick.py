@@ -1,6 +1,8 @@
 Chartkick.py
 ============
 
+.. image::  https://travis-ci.org/sammyrulez/chartkick.py.png?branch=master
+
 Create beautiful Javascript charts with minimal code. Python port of Chartkick_
 
 Supports `Google Charts`_ and Highcharts_
