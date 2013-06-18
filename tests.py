@@ -1,4 +1,7 @@
-import unittest
+try:
+    import unittest2 as unittest
+except:
+    import unittest
 
 from django.template import Template, Context
 from django.template import TemplateSyntaxError as DjangoTemplateSyntaxError
@@ -50,6 +53,8 @@ class TestsBase(object):
         self.assertNotIn('Chartkick.LineChart', chart)
         self.assertNotIn('Chartkick.PieChart', chart)
         self.assertIn('Chartkick.ColumnChart', chart)
+        
+
 
     def test_data_embeded(self):
         pass
