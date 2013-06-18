@@ -36,14 +36,10 @@ And draw charts: ::
         
 For line chart using *datetime* axis and multiple series use this *data* dict
 
-	def view(request):
-	    data = [
-	          {"name":"Workout", "data": {"2013-02-10 00:00:00 -0800": 3, "2013-02-17 00:00:00 -0800": 4}},
-	          {"name":"Call parents", "data": {"2013-02-10 00:00:00 -0800": 5, "2013-02-17 00:00:00 -0800": 3}}
-	            ];
-	    return render(request, 'stats/index.html', {'data': data})      
- 
-
+    def view(request):
+        data = data = [ {"name":"Workout", "data": {"2013-02-10 00:00:00 -0800": 3, "2013-02-17 00:00:00 -0800": 4}}, {"name":"Call parents", "data": {"2013-02-10 00:00:00 -0800": 5, "2013-02-17 00:00:00 -0800": 3}} ]
+        return render(request, 'template.html', {'data': data})
+        
 To draw users join chart: ::
 
     def view(request):
