@@ -50,7 +50,9 @@ class ChartExtension(Extension):
 
     def _render(self, data, caller, **kwargs):
         # jinja2 prepends 'l_' to keys
-        kwargs = {k[2:]: v for (k, v) in kwargs.items()}
+        kwargs = {}
+        for (k, v) in kwargs.items():
+            kwargs[k[2:]] = v 
 
         self.environment.options.update(kwargs)
         return CHART_HTML.format(data=data, options=kwargs,
